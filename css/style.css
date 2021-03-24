@@ -184,4 +184,8 @@ p {
     .main__inner {
         padding: 320px 30px 40px 30px;
     }
+    .header__inner{
+        display: block;
+        text-align: center;
+    }
 }
