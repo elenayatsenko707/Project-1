@@ -103,7 +103,9 @@ img {
 }
 .menu a {
     display: inline-block;
-    font-family: sans-serif;
+    font-size: 19px;
+    font-family: 'Raleway';
+    font-weight: 500;
     text-transform: uppercase;
     color: #00c0ff;
     padding: 10px 15px;
@@ -136,12 +138,7 @@ p {
     border-radius: 20px;
     color: #3ea2d8;
 }
-@media (max-width: 2560px) {
-    .wrapper {
-        background-size: cover;
-    }
-}
-@media (max-width: 1440px) {
+@media (max-width: 2652px) {
     .wrapper {
         background-size: cover;
     }
@@ -149,14 +146,12 @@ p {
 @media (max-width: 1360px) {
     .wrapper {
         background-size: cover;
+        background-position: 57%;
     }
 }
 @media (max-width: 1024px) {
-    .wrapper {
-        background-size: 1024px 960px;
-    }
     .main__inner {
-        padding: 386px 70px 100px 70px;
+        padding: 385px 70px 100px 70px;
     }
 }
 @media (max-width: 890px) {
@@ -164,23 +159,7 @@ p {
         margin: 0;
     }
 }
-@media (max-width: 770px) {
-    .wrapper {
-        background-size: 870px 895px;
-    }
-}
-@media (max-width: 600px) {
-    .wrapper {
-        background-size: 620px 880px;
-    }
-    .main__inner {
-        padding: 386px 50px 100px 50px;
-    }
-}
-@media (max-width: 425px) {
-    .wrapper {
-        background-size: 425px 895px;
-    }
+@media (max-width: 600px) { 
     .main__inner {
         padding: 320px 30px 40px 30px;
     }
