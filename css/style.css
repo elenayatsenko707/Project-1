@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;700&display=swap'); */
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Medium.woff2') format('woff2'),
@@ -76,10 +75,8 @@ img {
     max-width: 100%;
 }
 .wrapper {
-   position: relative;
-   overflow: hidden;
-   background-image: url(../images/banner.jpg);
-   background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 .header {
     position: absolute;
@@ -92,7 +89,6 @@ img {
     margin: 0 auto;
 }
 .header__inner {
-    max-width: 1220px;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
@@ -111,13 +107,22 @@ img {
     padding: 10px 15px;
     margin: 0 0 0 75px;
 }
+.main__banner {
+    max-width: 100%;
+}
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
 .main__inner {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding: 390px 325px 160px 325px;
 }
-.text {
+.text__sport {
     margin-bottom: 60px;
 }
 p {
@@ -139,12 +144,34 @@ p {
     color: #3ea2d8;
 }
 @media (max-width: 2652px) {
-    .wrapper {
+    .header__inner {
+        max-width: 2300px;
+        padding: 10px 30px;
+    }
+    .banner {
         background-size: cover;
+    }
+    .main__inner {
+        padding: 750px 350px 100px 350px;
+    }
+}
+@media (max-width: 2200px) {
+    .main__inner {
+        padding: 600px 325px 160px 325px;
+    }
+}
+@media (max-width: 1900px) {
+    .main__inner {
+        padding: 540px 325px 160px 325px;
+    }
+}
+@media (max-width: 1440px) {
+    .main__inner {
+        padding: 390px 325px 160px 325px;
     }
 }
 @media (max-width: 1360px) {
-    .wrapper {
+    .banner {
         background-size: cover;
         background-position: 57%;
     }
@@ -163,7 +190,7 @@ p {
     .main__inner {
         padding: 320px 30px 40px 30px;
     }
-    .header__inner{
+    .header__inner {
         display: block;
         text-align: center;
     }
