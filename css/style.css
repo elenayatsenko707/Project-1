@@ -78,120 +78,243 @@ img {
     position: relative;
     overflow: hidden;
 }
-.header {
-    position: absolute;
-    padding-top: 40px;
-    width: 100%; 
-} 
 .container {
-    width: 100%;
-    background-color: #000;
+    max-width: 1160px;
+    padding: 0 15px;
     margin: 0 auto;
 }
-.header__inner {
+.header .container {
+    max-width: 1215px;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    margin: 0 auto;
+    align-items: center;
 }
-.menu li {
-    display: inline;
+.header {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0px;
+} 
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
 }
-.menu a {
-    display: inline-block;
+.nav__item {
+    margin: 0 33px 0 31px;
+}
+.navigation a {
+    display: block;
     font-size: 19px;
     font-family: 'Raleway';
     font-weight: 500;
     text-transform: uppercase;
     color: #00c0ff;
-    padding: 10px 15px;
-    margin: 0 0 0 75px;
+    padding: 10px 0px;
 }
-.main__banner {
-    max-width: 100%;
-}
-.banner {
-    background-image: url(../images/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
-.main__inner {
+.mobile-button {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: none;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.mobile-button span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #00c0ff;
+    z-index: 5;
+    opacity: 1;
+    transition: .3s;
+}
+.mobile-button:before,
+.mobile-button:after {
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: #00c0ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+.mobile-button:after {
+    top: auto;
+    bottom: 0;
+}
+.mobile-button.opened span {
+    opacity: 0;
+}
+.mobile-button.opened:before {
+    transform: rotate(45deg);
+    top: calc(50% - 2px);
+}
+.mobile-button.opened:after {
+    transform: rotate(-45deg);
+    bottom: calc(50% - 2px);
+}
+.main {
+    min-height: 100vh;
+    background: url(../images/banner.jpg) no-repeat 100% 0%;
+    background-size: cover;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 383px 0 160px 0;
+}
+.main .container__promo {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    padding: 390px 325px 160px 325px;
+    align-items: center;
+    justify-content: center;
 }
-.text__sport {
-    margin-bottom: 60px;
+.main img {
+    margin-bottom: 52px;
 }
-p {
+.main p {
     font-family: 'Raleway';
     font-weight: normal;
-    line-height: 20px;
+    line-height: 25px;
+    font-size: 20px;
     text-align: center;
     color: #fff;
-    margin-bottom: 100px;
+    margin-bottom: 95px;
+    max-width: 800px;
+    padding: 0px 11px; 
 }
 .button {
     font-family: 'Roboto';
     font-weight: bold;
     background: #fff;
-    font-size: 19px;
+    border: 0;
+    font-size: 24px;
     text-transform: uppercase;
-    padding: 10px 50px;
-    border-radius: 20px;
-    color: #3ea2d8;
+    padding: 13px 61px;
+    border-radius: 26px;
+    color: #00c0ff;
 }
-@media (max-width: 2652px) {
-    .header__inner {
-        max-width: 2300px;
-        padding: 10px 30px;
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 164px 0;
+}
+.text {
+    color: #00c0ff;
+    max-width: 890px;
+    text-align: center;
+}
+.text h1 {
+    font-family: 'Raleway';
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.text p {
+    font-size: 19px;
+    line-height: 31px;
+    font-family: 'Raleway';
+    font-weight: normal;
+}
+.col {
+    background: #333333;
+}
+.box {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; 
+    justify-content: space-between;
+    color: #fff;
+    max-width: 1090px;
+    margin: 0 auto;
+    padding: 131px 0 114px 0;  
+}
+.inner {
+    max-width: 290px;
+}
+.inner h1 {
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.inner p {
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+@media (max-width: 1200px) {
+   .inner {
+       padding: 0 20px;
+    } 
+   .inner h1 {
+        font-size: 17px;
     }
-    .banner {
-        background-size: cover;
-    }
-    .main__inner {
-        padding: 750px 350px 100px 350px;
+    .text p {
+        padding: 0 30px;
     }
 }
-@media (max-width: 2200px) {
-    .main__inner {
-        padding: 600px 325px 160px 325px;
+@media (max-width: 800px) {
+    .mobile-button {
+        display: inline-flex;
     }
-}
-@media (max-width: 1900px) {
-    .main__inner {
-        padding: 540px 325px 160px 325px;
-    }
-}
-@media (max-width: 1440px) {
-    .main__inner {
-        padding: 390px 325px 160px 325px;
-    }
-}
-@media (max-width: 1360px) {
-    .banner {
-        background-size: cover;
-        background-position: 57%;
-    }
-}
-@media (max-width: 1024px) {
-    .main__inner {
-        padding: 385px 70px 100px 70px;
-    }
-}
-@media (max-width: 890px) {
-    .menu a {
-        margin: 0;
-    }
-}
-@media (max-width: 600px) { 
-    .main__inner {
-        padding: 320px 30px 40px 30px;
-    }
-    .header__inner {
-        display: block;
+    .navigation {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: auto;
         text-align: center;
+        background: #000;
+        z-index: 20;
+    }
+    .header {
+        top: 0;
+    }
+    .header .container {
+        padding: 8px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main {
+        background-position: 80%;
+    }
+}
+@media (max-width: 425px) {
+    .main {
+        background-position: 73%;
+        padding: 290px 0 80px 0;
+    }
+    .title {
+        padding: 20px 0;
+    }
+    .text h1 {
+        margin-bottom: 10px;
+    }
+    .box {
+        flex-direction: column;
+        padding: 20px 0;  
+    }
+    .inner h1 {
+        margin-bottom: 0;
+    }
+    .inner p {
+        padding: 20px 0;
+    }
+    .box .inner:last-child p {
+        padding: 20px 0 0;
     }
 }
